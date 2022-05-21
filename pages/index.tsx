@@ -7,15 +7,16 @@ import { Layout } from '../components/Layout';
 interface Props { homes: Home[] }
 
 const Index: NextPage<Props> = ({ homes }: Props) => {
-  <Layout>
+  return (<Layout>
     <HomeList homes={homes} />
-  </Layout>
+  </Layout>);
 };
 
 export async function getStaticProps() {
+  const homes = await getRandomHomes();
   return {
     props: {
-      home: getRandomHomes()
+      homes,
     }
   };
 }
