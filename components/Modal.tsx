@@ -44,7 +44,7 @@ export const Modal: FC<{
     } transition-opacity duration-200 fixed w-full h-full top-0 left-0 flex items-center justify-center`}
   >
     <Overlay onClose={onClose} />
-    <Card className="z-50 w-11/12 mx-auto overflow-y-auto md:max-w-md">
+    <Card className="z-50 w-11/12 mx-auto md:max-w-3xl">
       <Header onClose={onClose}>{title}</Header>
       {children}
     </Card>

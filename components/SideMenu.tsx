@@ -8,7 +8,6 @@ const MenuEntry = ({ href, icon, title }: {
   title: ReactNode
 }) => {
   const {pathname } = useRouter()
-  console.log('location', location)
   return (
     <a className={`flex items-center justify-start p-2 my-0 font-thin  transition-colors duration-200 hover:text-gray-800 ${pathname === href ? 'text-blue-500' : 'text-gray-500'}`} href={href}>
       <span className="text-left">
